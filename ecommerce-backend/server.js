@@ -1,5 +1,18 @@
 const express = require("express");
-const connectDB = require("./config/db");
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+
+// Import routes
+import cartRoutes from "./routes/cartRoutes.js";
+app.use("/api/cart", cartRoutes);
+
+import orderRoutes from "./routes/orderRoutes.js";
+app.use("/api/orders", orderRoutes);
+
+import productRoutes from "./routes/productRoutes.js";
+
+app.use("/api/products", productRoutes);
+
 
 const app = express();
 
@@ -7,6 +20,7 @@ const app = express();
 app.use(express.json());
 
 // Connect to MongoDB
+dotenv.config();
 connectDB();
 
 // Test route

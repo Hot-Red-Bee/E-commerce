@@ -1,11 +1,10 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    // Direct connection string instead of process.env
-    const conn = await mongoose.connect(
-      "mongodb://localhost:27017/", // Replace with your DB URL
-    );
+    const conn = await mongoose.connect(process.env.MONGO_URI, {
+      // Optional: you can add options here if needed
+    });
     console.log(`MongoDB connected: ${conn.connection.host}`);
   } catch (error) {
     console.error("DB Connection Failed:", error.message);
@@ -13,4 +12,4 @@ const connectDB = async () => {
   }
 };
 
-module.exports = connectDB;
+export default connectDB;

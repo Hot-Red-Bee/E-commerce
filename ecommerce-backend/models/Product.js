@@ -24,7 +24,6 @@ const productSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        enum: ["electronics", "clothing", "home", "books", "toys", "sports"]
     },
     stock: {
         type: Number,
