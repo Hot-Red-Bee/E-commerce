@@ -26,6 +26,8 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+//testing this
+
 // Connect to MongoDB
 dotenv.config();
 connectDB();
