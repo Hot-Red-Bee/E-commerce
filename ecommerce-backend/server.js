@@ -7,7 +7,7 @@ const dotenv = require("dotenv"); //Changed import to require, syntax conflit re
 import cartRoute from "./routes/cartRoute.js"; //Fixed cartRoutes spelling to cartRoute
 app.use("/api/cart", cartRoute);
 
-import orderRoute from "./routes/orderRoutes.js";
+import orderRoute from "./routes/orderRoute.js";
 app.use("/api/orders", orderRoute);
 
 import productRoute from "./routes/productRoute.js";
