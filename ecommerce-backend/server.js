@@ -4,7 +4,7 @@ import connectDB from "./config/db.js";
 const dotenv = require("dotenv"); //Changed import to require, syntax conflit resolved
 
 // Import routes
-import cartRoute from "./routes/cartRoutes.js"; //Fixed cartRoutes spelling to cartRoute
+import cartRoute from "./routes/cartRoute.js"; //Fixed cartRoutes spelling to cartRoute
 app.use("/api/cart", cartRoute);
 
 import orderRoute from "./routes/orderRoutes.js";
