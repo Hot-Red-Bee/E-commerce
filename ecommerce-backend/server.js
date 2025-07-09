@@ -21,7 +21,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoute);
 
-
 const app = express();
 
 // Middleware
